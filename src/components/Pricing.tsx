@@ -12,7 +12,7 @@ const Pricing: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Standard Plan */}
           <div className="bg-zinc-900 rounded-2xl p-8 border border-zinc-800 hover:border-zinc-700 transition-all duration-300">
             <div className="flex justify-between items-start mb-6">
@@ -58,7 +58,7 @@ const Pricing: React.FC = () => {
           </div>
 
           {/* Premium Plan */}
-          <div className="bg-zinc-900 rounded-2xl p-8 border-2 border-yellow-500 relative">
+          <div className="bg-zinc-900 rounded-2xl p-8 border-2 border-yellow-500 relative transform hover:scale-105 transition-all duration-300">
             <div className="absolute -top-4 right-4 bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-semibold">
               Most Popular
             </div>
@@ -97,17 +97,77 @@ const Pricing: React.FC = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Check className="text-green-500" size={20} />
-                <span>Interview Preparation</span>
+                <span>Resume Review</span>
               </li>
               <li className="flex items-center gap-3">
                 <Check className="text-green-500" size={20} />
-                <span>Resume Review</span>
+                <span>Portfolio Development</span>
               </li>
             </ul>
 
             <a
               href="#contact"
               className="block w-full bg-yellow-500 text-black text-center py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+
+          {/* Pro Plan */}
+          <div className="bg-zinc-900 rounded-2xl p-8 border-2 border-blue-500 relative">
+            <div className="absolute -top-4 right-4 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+              Career Fast-Track
+            </div>
+            
+            <div className="flex justify-between items-start mb-6">
+              <div>
+                <h3 className="text-2xl font-bold mb-2">Pro Plan</h3>
+                <p className="text-gray-400">7 Classes Per Week</p>
+              </div>
+              <div className="bg-blue-500 rounded-full p-2">
+                <Star size={24} className="text-white" />
+              </div>
+            </div>
+            
+            <div className="mb-6">
+              <span className="text-4xl font-bold">$300</span>
+              <span className="text-gray-400">/month</span>
+            </div>
+
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-center gap-3">
+                <Check className="text-green-500" size={20} />
+                <span>Everything in Premium</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Check className="text-green-500" size={20} />
+                <span>28 Sessions per Month</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Check className="text-green-500" size={20} />
+                <span>Interview Preparation</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Check className="text-green-500" size={20} />
+                <span>Mock Interviews</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Check className="text-green-500" size={20} />
+                <span>Job Search Strategy</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Check className="text-green-500" size={20} />
+                <span>LinkedIn Optimization</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Check className="text-green-500" size={20} />
+                <span>Job Application Support</span>
+              </li>
+            </ul>
+
+            <a
+              href="#contact"
+              className="block w-full bg-blue-500 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors duration-300"
             >
               Get Started
             </a>

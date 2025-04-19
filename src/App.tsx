@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import emailjs from '@emailjs/browser';
 
 // Initialize EmailJS with your public key
-emailjs.init("3jVLFRXQVPvqPPMYv");
+// emailjs.init("3jVLFRXQVPvqPPMYv");
 
 function App() {
   React.useEffect(() => {

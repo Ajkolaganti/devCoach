@@ -1,4 +1,4 @@
-import { Code, Brain, Cloud, Terminal, Shield } from 'lucide-react';
+import { Code, Brain, Cloud, Terminal, Shield, Database, BarChart, LineChart } from 'lucide-react';
 import { Service, Testimonial } from '../types';
 
 export const services: Service[] = [
@@ -16,6 +16,32 @@ export const services: Service[] = [
     ]
   },
   {
+    id: 'data-analysis',
+    title: 'Data Analysis',
+    description: 'Learn to analyze and visualize data using modern tools and techniques.',
+    icon: BarChart,
+    bulletPoints: [
+      'Data cleaning and preprocessing techniques',
+      'Statistical analysis and hypothesis testing',
+      'Data visualization with Python libraries',
+      'SQL for data analysis',
+      'Business intelligence tools (Power BI, Tableau)'
+    ]
+  },
+  {
+    id: 'data-science',
+    title: 'Data Science',
+    description: 'Master the complete data science workflow from data collection to deployment.',
+    icon: LineChart,
+    bulletPoints: [
+      'Advanced statistical methods',
+      'Machine learning algorithms',
+      'Deep learning with PyTorch and TensorFlow',
+      'Natural Language Processing (NLP)',
+      'Big Data processing with Spark'
+    ]
+  },
+  {
     id: 'ai',
     title: 'AI & Machine Learning',
     description: 'Learn essential concepts in AI/ML and how to implement them in your projects.',
@@ -26,6 +52,19 @@ export const services: Service[] = [
       'Learn prompt engineering for LLMs',
       'Implement AI features in real-world applications',
       'Utilize AI-assisted development tools'
+    ]
+  },
+  {
+    id: 'data-engineering',
+    title: 'Data Engineering',
+    description: 'Build robust data pipelines and infrastructure for large-scale data processing.',
+    icon: Database,
+    bulletPoints: [
+      'Data warehouse design and implementation',
+      'ETL pipeline development',
+      'Data modeling and architecture',
+      'Stream processing with Kafka',
+      'Data quality and governance'
     ]
   },
   {

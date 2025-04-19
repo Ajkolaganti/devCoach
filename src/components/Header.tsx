@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Code, Menu, X } from 'lucide-react';
 import { NavLink } from '../types';
+import logo from '../assests/devCoach.png'
 
 const navLinks: NavLink[] = [
   { name: 'Home', href: '#' },
@@ -32,19 +33,16 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-8">
         <nav className="flex items-center justify-between">
-          <div className="flex items-center">
-            <Code 
-              size={28} 
-              className={`mr-2 ${isScrolled ? 'text-yellow-500' : 'text-white'}`} 
+          <a href="#" className="flex items-center">
+            <img 
+              src={logo}
+              alt="DevCoach Logo"
+              className="w-20 h-20 mr-2 object-contain"
             />
-            <span 
-              className={`font-bold text-xl ${
-                isScrolled ? 'text-white' : 'text-white'
-              }`}
-            >
-              DevCoach
+            <span className="font-bold text-xl text-white">
+              
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">

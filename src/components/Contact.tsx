@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
-// Initialize EmailJS
-emailjs.init("idSR3AmpH6LKicBbS"); // Your public key
+// Initialize EmailJS with your private key
+emailjs.init("idSR3AmpH6LKicBbS"); // Your private key
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -33,24 +33,24 @@ const Contact: React.FC = () => {
     try {
       // Send message to admin with all details
       const adminResult = await emailjs.send(
-        'service_kpijuop',
-        'devcoach',
+        'service_kpijuop', // Your service ID
+        'devcoach',        // Your template ID
         {
           from_name: formData.name,
           from_email: formData.email,
-          phone_number: formData.phone,         // Added phone number
-          service_interested: formData.service,  // Made field names more descriptive
-          experience_level: formData.experience, // Made field names more descriptive
-          preferred_time: formData.availability, // Made field names more descriptive
+          phone_number: formData.phone,
+          service_interested: formData.service,
+          experience_level: formData.experience,
+          preferred_time: formData.availability,
           message: formData.message,
           to_name: 'DevCoach Team',
         }
       );
 
-      // Send auto-reply to user with new template ID
+      // Send auto-reply to user
       const autoReplyResult = await emailjs.send(
-        'service_kpijuop',
-        'thankyouDevcoach', // Updated template ID
+        'service_kpijuop',     // Your service ID
+        'thankyouDevcoach',    // Your auto-reply template ID
         {
           to_name: formData.name,
           to_email: formData.email,
